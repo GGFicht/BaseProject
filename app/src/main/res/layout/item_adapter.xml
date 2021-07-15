@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/default_component_margin"
+        android:layout_marginBottom="12dp"
+        android:padding="@dimen/default_component_margin"
+        android:orientation="vertical"
+        android:elevation="6dp"
+        android:background="@drawable/bg_rounded_edges_12dp"
+        android:foreground="?attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:drawablePadding="8dp"
+            tools:text="@string/example_text"
+            app:drawableStartCompat="@drawable/ic_done_outline"
+            app:drawableTint="@color/blue_light_secondary" />
+
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:textColor="@color/gray_strong"
+            android:textSize="16sp"
+            android:linksClickable="true"
+            android:autoLink="web"
+            android:ellipsize="end"
+            android:minLines="2"
+            tools:text="@string/example_description" />
+    </LinearLayout>
+</layout>

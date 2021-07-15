@@ -1,0 +1,10 @@
+<templateSet group="Android">
+  <template name="templateSimpleAdapter" value="import android.view.LayoutInflater&#10;import android.view.View&#10;import android.view.ViewGroup&#10;import androidx.recyclerview.widget.RecyclerView&#10;&#10;class $AdapterName$Adapter(private val onClick: (Int) -&gt; Unit = {}) : RecyclerView.Adapter&lt;$AdapterName$Adapter.$AdapterName$ViewHolder&gt;() {&#10;&#10;    var models: List&lt;$model$&gt; = emptyList()&#10;        set(value) {&#10;            field = value&#10;            notifyDataSetChanged()&#10;        }&#10;&#10;    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): $AdapterName$ViewHolder {&#10;        return $AdapterName$ViewHolder($layoutBinding$.inflate(LayoutInflater.from(parent.context), parent, false))&#10;    }&#10;&#10;    override fun onBindViewHolder(holder: $AdapterName$ViewHolder, position: Int) {&#10;        holder.binding.apply {&#10;            // todo layoutView.text = models[position].modelField&#10;        }&#10;    }&#10;&#10;    override fun getItemCount() = models.size&#10;&#10;    inner class $AdapterName$ViewHolder(val binding: $layoutBinding$) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {&#10;&#10;        init {&#10;            binding.root.setOnClickListener(this)&#10;        }&#10;&#10;        override fun onClick(v: View?) {&#10;            val position = adapterPosition&#10;            if (position != RecyclerView.NO_POSITION) {&#10;                onClick.invoke(position)&#10;            }&#10;        }&#10;    }&#10;}" description="(Quick simple adapter setup)" toReformat="false" toShortenFQNames="true">
+    <variable name="AdapterName" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="model" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="layoutBinding" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+</templateSet>

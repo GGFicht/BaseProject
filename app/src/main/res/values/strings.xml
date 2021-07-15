@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">BlankProject</string>
     <string name="name">Name:</string>
-    <string name="example_text">Hello my good sir</string>
     <string name="submit">submit</string>
+    <string name="example_text">Hello my good sir</string>
+    <string name="example_description">O texto descrito aqui é muito informativo e útil, recomendo muito a sua leitura integral e não é de forma alguma encheção de linguiça</string>
 </resources>
