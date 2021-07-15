@@ -1,6 +1,6 @@
 # BaseProject
 
-Quickly setup for any project
+Quick setup for any project
 
 currently includes:
 - viewBinding setup
